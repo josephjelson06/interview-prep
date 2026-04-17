@@ -1,0 +1,6 @@
+{
+  "name": "Interview Prep",
+  "description": "A static, frontend-only interview preparation tool focused on React, Next.js, JavaScript, and Node.js/Express.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
