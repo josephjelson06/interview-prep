@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { curriculumQuestions } from '@/lib/questions';
 
@@ -35,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-20">
         {categories.map((category) => {
           const categoryQuestions = curriculumQuestions.filter(q => q.category === category.name);
           const topicsCount = new Set(categoryQuestions.map(q => q.topic)).size;
@@ -73,6 +74,39 @@ export default function Home() {
           );
         })}
       </section>
+
+      {/* About Me Section */}
+      <section className="mt-20 pt-16 border-t border-outline flex flex-col md:flex-row gap-10 items-center md:items-start text-center md:text-left relative">
+        <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        
+        <div className="shrink-0 relative w-40 h-40 md:w-56 md:h-56">
+          {/* Replace this placeholder src with the actual path to your picture, e.g., src="/jelson-joseph.jpg" */}
+          <Image
+            src="https://picsum.photos/seed/jelson/400/400"
+            alt="Jelson Joseph"
+            fill
+            referrerPolicy="no-referrer"
+            className="object-cover rounded-full border border-outline p-2 bg-surface-container"
+          />
+        </div>
+        
+        <div className="space-y-6 max-w-2xl bg-surface-container-low border border-outline p-8 md:p-10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[40px] -z-10"></div>
+          
+          <h2 className="font-headline text-3xl font-light text-on-surface">About Me</h2>
+          
+          <p className="font-body text-[15px] text-on-surface-variant leading-[1.8]">
+            Hello Everyone! My name is Jelson Joseph, and I am a Software Engineer with a passion for crafting innovative solutions. I have a strong background in software development, and I am always eager to take on new challenges and learn new technologies. I believe in the power of collaboration and teamwork, and I am committed to delivering high-quality results in every project I undertake.
+          </p>
+          
+          <div className="pt-2">
+             <span className="font-label text-[10px] tracking-[0.2em] text-primary uppercase inline-block px-3 py-1.5 border border-primary/20 bg-primary/5">
+               Jelson Joseph &bull; Software Engineer
+             </span>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
