@@ -80,12 +80,10 @@ export default function Home() {
         <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
         
         <div className="shrink-0 relative w-40 h-40 md:w-56 md:h-56">
-          {/* Replace this placeholder src with the actual path to your picture, e.g., src="/jelson-joseph.jpg" */}
           <Image
-            src="https://picsum.photos/seed/jelson/400/400"
+            src="/DP.jpg"
             alt="Jelson Joseph"
             fill
-            referrerPolicy="no-referrer"
             className="object-cover rounded-full border border-outline p-2 bg-surface-container"
           />
         </div>
