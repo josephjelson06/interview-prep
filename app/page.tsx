@@ -88,7 +88,7 @@ export default function Home() {
           />
         </div>
         
-        <div className="space-y-6 max-w-2xl bg-surface-container-low border border-outline p-8 md:p-10 relative overflow-hidden">
+        <div className="space-y-6 max-w-8xl bg-surface-container-low border border-outline p-8 md:p-10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[40px] -z-10"></div>
           
           <h2 className="font-headline text-3xl font-light text-on-surface">About Me</h2>
